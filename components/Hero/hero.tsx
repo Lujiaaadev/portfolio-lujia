@@ -1,45 +1,44 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import avatar from '@/public/images/Lujia.jpg';
 import { FlipWords } from '../ui/flip-words';
 import { FaDiscord } from 'react-icons/fa';
 import { FaTelegramPlane } from 'react-icons/fa';
+import Starfield from '../ui/Starfield';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-br from-gray-950 via-gray-950 to-black py-16 px-4 sm:px-6 lg:px-8">
+    // Hero Section
+        <section className="relative min-h-screen flex items-center bg-black py-16 px-4 sm:px-6 lg:px-8">
+      {/* Add Starfield as the first child */}
+      <Starfield 
+        starCount={1000} 
+        starColor={[255, 255, 255]} 
+        speedFactor={0.05} 
+        backgroundColor="black" 
+      />
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Hey, I&apos;m <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">Lujia</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6">
+            Hey, I&apos;m <span className="text-white text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-extrabold filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] animate-shine">
+            Lujia
+          </span>
           </h1>
           <FlipWords 
-          words={["Web Designer", "Developer", "UI/UX Designer", "Full Stack Developer"]}
+          words={["Web Designer", "Software Engineer", "UI/UX Designer", "Mobile App Developer", "Web Developer"]}
           className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text 
             text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6
             [text-wrap:balance] [&_div]:animate-shimmer"
         />
           <p className="text-gray-400 text-lg mb-8 max-w-2xl">  
-          Crafting stunning digital experiences with pixel-perfect precision. 
+          Crafting stunning digital experiences with pixel
+          -perfect precision. 
           From concept to code, I transform ideas into beautiful, high-performance websites 
           that leave a lasting impression.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
-          <Link 
-          href="/projects"
-          className="group relative px-8 py-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 
-            text-white rounded-full transition-all duration-300 ease-out
-            hover:scale-105 hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]
-            before:absolute before:inset-0
-            before:bg-gradient-to-r before:from-blue-400 before:via-purple-500 before:to-pink-500
-            before:rounded-full before:opacity-0 before:transition-opacity
-            before:duration-300 before:animate-shimmer
-            before:hover:opacity-100 overflow-hidden"
-        >
-          <span className="relative z-10">View Projects</span>
-        </Link>
+          <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-2">
+        
           </div>
           <div className="flex gap-6 justify-center lg:justify-start">
           <a href="https://discord.com/users/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
@@ -53,14 +52,18 @@ const Hero = () => {
 
         {/* Right Content */}
         <div className="flex-1 relative">
-          <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
-            <Image
-              src={avatar}
-              alt="Profile Picture"
-              fill
-              className="rounded-full object-cover shadow-2xl animate-float"
-              priority
-            />
+        <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-yellow-500 via-pink-500 animate-spin-slow p-[4px]">
+            <div className="h-full w-full rounded-full bg-white dark:bg-gray-900">
+              <Image
+                src={avatar}
+                alt="Profile Picture"
+                fill
+                className="rounded-full object-cover shadow-2xl animate-float"
+                priority
+              />
+              </div>
+            </div>
           </div>
         </div>
       </div>
