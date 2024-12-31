@@ -33,9 +33,8 @@ export default function Navbar() {
 
       const navItems = [
         { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
         { name: 'Services', href: '#services' },
-        { name: 'Projects', href: '#projects' },
+        { name: 'About', href: '#about' },
         { name: 'Contact', href: '#contact' },
     ];
 
@@ -98,52 +97,59 @@ export default function Navbar() {
 
 
           {/* Mobile Menu Button */}
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsOpen(!isOpen)}
-            className="relative z-10 md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-            aria-label="Toggle menu"
-          >
-            <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`block h-0.5 w-full bg-white transform transition-all duration-300 ${
-                isOpen ? 'rotate-45 translate-y-2' : ''
-              }`} />
-              <span className={`block h-0.5 w-full bg-white transition-all duration-300 ${
-                isOpen ? 'opacity-0' : ''
-              }`} />
-              <span className={`block h-0.5 w-full bg-white transform transition-all duration-300 ${
-                isOpen ? '-rotate-45 -translate-y-2' : ''
-              }`} />
-            </div>
-          </motion.button>
+        <motion.button
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setIsOpen(!isOpen)}
+          className="relative z-50 md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+          aria-label="Toggle menu"
+        >
+          <div className="w-6 h-5 flex flex-col justify-between">
+            <span className={`block h-0.5 w-full bg-white transform transition-all duration-300 ${
+              isOpen ? 'rotate-45 translate-y-2' : ''
+            }`} />
+            <span className={`block h-0.5 w-full bg-white transition-all duration-300 ${
+              isOpen ? 'opacity-0' : ''
+            }`} />
+            <span className={`block h-0.5 w-full bg-white transform transition-all duration-300 ${
+              isOpen ? '-rotate-45 -translate-y-2' : ''
+            }`} />
+          </div>
+        </motion.button>
 
-
-          {/* Mobile Menu */}
-          <AnimatePresence>
+        {/* Mobile Menu */}
+        <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 top-[64px] bg-black/95 backdrop-blur-sm z-40"
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-screen w-full sm:w-[300px] bg-black/95 backdrop-blur-lg shadow-xl border-l border-white/10 z-40"
             >
-              <div className="flex flex-col items-center justify-center h-[calc(100vh-64px)] gap-8">
-                {navItems.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1 }}
-                  >
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="text-2xl font-medium text-white hover:text-primary-500 transition-colors"
+              <div className="flex flex-col h-full py-20 px-8">
+                <nav className="flex flex-col items-start space-y-8">
+                  {navItems.map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.1 }}
+                      className="w-full"
                     >
-                      {item.name}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`block text-xl font-medium transition-colors duration-200 hover:text-cyan-400 ${
+                          activeSection === item.href.replace('#', '') 
+                            ? 'text-white' 
+                            : 'text-gray-400'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
               </div>
             </motion.div>
           )}

@@ -9,7 +9,7 @@ import Starfield from '../ui/Starfield';
 const Hero = () => {
   return (
     // Hero Section
-    <section className="relative min-h-screen flex items-center bg-black py-16 px-4 sm:px-6 lg:px-8">
+    <section id='home' className="relative min-h-screen flex items-center bg-black py-16 px-4 sm:px-6 lg:px-8">
       {/* Add Starfield as the first child */}
       <Starfield 
         starCount={1000} 
@@ -21,7 +21,7 @@ const Hero = () => {
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6">
-            Hey, I&apos;m <span className="text-white text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-500 font-extrabold filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] animate-shine">
+            Hey, I&apos;m <span className="text-white font-extrabold filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] animate-shine">
             Lujia
           </span>
           </h1>
@@ -32,19 +32,16 @@ const Hero = () => {
             [text-wrap:balance] [&_div]:animate-shimmer"
         />
           <p className="text-gray-400 text-lg mb-8 max-w-2xl">  
-          Crafting stunning digital experiences with pixel
-          -perfect precision. 
-          From concept to code, I transform ideas into beautiful, high-performance websites 
-          that leave a lasting impression.
+          A passionate web developer creating stunning, responsive websites. Specialized in modern designs and efficient coding, turning ideas into digital experiences that work seamlessly on any device.
           </p>
           <div className="flex flex-wrap gap-4 justify-center lg:justify-start mb-2">
         
           </div>
           <div className="flex gap-6 justify-center lg:justify-start">
-          <a href="https://discord.com/users/@uixlujiaaa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
+          <a href="https://discord.gg/TKtXCYmvAK" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
             <FaDiscord size={24} />
           </a>
-          <a href="https://t.me/@uixLujiaaa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
+          <a href="https://t.me/lujiadev_services" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
             <FaTelegramPlane size={24} />
           </a>
           </div>

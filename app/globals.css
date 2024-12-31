@@ -11,6 +11,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -149,4 +153,127 @@ body {
 
 .infinite-scroll-container:hover .infinite-scroll-marquee {
   animation-play-state: paused;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hover\:bg-gradient-to-r:hover {
+  animation: gradient 3s ease infinite;
+}
+
+.projects-section {
+  @apply bg-[#0d1117] py-16 px-4;
+}
+
+.projects-container {
+  @apply max-w-7xl mx-auto;
+}
+
+.projects-title {
+  @apply text-4xl font-bold text-[#c9d1d9] text-center mb-2;
+}
+
+.projects-subtitle {
+  @apply text-[#8b949e] text-center mb-12;
+}
+
+.projects-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.project-card {
+  @apply bg-[#161b22] border border-[#30363d] rounded-lg overflow-hidden 
+  transition-transform duration-300 hover:-translate-y-2;
+}
+
+.project-image {
+  @apply relative w-full h-48;
+}
+
+.project-img {
+  @apply object-cover;
+}
+
+.project-content {
+  @apply p-6;
+}
+
+.project-title {
+  @apply text-xl font-semibold text-[#c9d1d9] mb-2;
+}
+
+.project-description {
+  @apply text-[#8b949e] text-sm mb-4;
+}
+
+.project-tech {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.tech-tag {
+  @apply bg-[#238636] text-white px-3 py-1 rounded-full text-xs;
+}
+
+.project-links {
+  @apply flex gap-4;
+}
+
+.github-link,
+.live-link {
+  @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.github-link {
+  @apply bg-[#238636] text-white hover:bg-[#2ea043];
+}
+
+.live-link {
+  @apply bg-[#30363d] text-[#c9d1d9] hover:bg-[#3c444c];
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    @apply text-3xl;
+  }
+
+  .projects-grid {
+    @apply grid-cols-1;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-border {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+    background-size: 300% 300%;
+    animation: gradient-animation 3s ease infinite;
+    border-radius: 0.5rem;
+    filter: blur(8px);
+  }
 }

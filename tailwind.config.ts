@@ -19,6 +19,16 @@ export default {
         'xs': '480px',
       },
       keyframes: {
+        gradient: {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        },
         blob: {
           "0%": { transform: "translate(0px, 0px) scale(1)" },
           "33%": { transform: "translate(20px, -30px) scale(1.05)" },
@@ -41,6 +51,7 @@ export default {
       animation: {
         float: "float 3s infinite",
         blob: "blob 10s infinite",
+        'gradient-xy': 'gradient-xy 15s ease infinite',
       }
     }
   },

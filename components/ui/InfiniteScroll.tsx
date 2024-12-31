@@ -2,11 +2,11 @@ import React from 'react';
 
 const InfiniteScroll = () => {
   const roles = [
-    'WEB DEVELOPMENT',
-    'FRONT-END DEVELOPER',
-    'BACKEND DEVELOPER',
-    'ANDROID DEVELOPER',
-    'MOBILE DEVELOPER',
+    'WEB DEVELOPMENT SERVICES',
+    'FRONT-END DESIGN AND DEVELOPMENT',
+    'BACKEND DEVELOPMENT AND INTEGRATION',
+    'ANDROID APP DEVELOPMENT',
+    'MOBILE APP DEVELOPMENT SERVICES',
   ];
 
   return (

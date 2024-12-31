@@ -68,7 +68,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section id="services" className="py-32 bg-black ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -76,7 +76,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 px-4 text-center animate-shine">My Services</h2>          <p className="text-lg text-gray-400">Professional web development and design solutions</p>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-extrabold filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] animate-shine mb-4 px-4 text-center animate-shine">My Services</h2>          <p className="text-lg text-gray-400">Professional web development and design solutions</p>
         </motion.div>
 
         <motion.div 
