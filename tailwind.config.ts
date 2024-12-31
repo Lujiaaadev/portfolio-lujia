@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -34,11 +37,10 @@ export default {
             backgroundPosition: "350% 50%, 350% 50%",
           },
         },
-        
       },
       animation: {
-        float: 'float 8s ease-in-out infinite',
-        blob: "blob 50s infinite",
+        float: "float 3s infinite",
+        blob: "blob 10s infinite",
       }
     }
   },

@@ -9,7 +9,7 @@ import Starfield from '../ui/Starfield';
 const Hero = () => {
   return (
     // Hero Section
-        <section className="relative min-h-screen flex items-center bg-black py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center bg-black py-16 px-4 sm:px-6 lg:px-8">
       {/* Add Starfield as the first child */}
       <Starfield 
         starCount={1000} 
@@ -17,17 +17,17 @@ const Hero = () => {
         speedFactor={0.05} 
         backgroundColor="black" 
       />
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 mt-6">
         {/* Left Content */}
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6">
-            Hey, I&apos;m <span className="text-white text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 font-extrabold filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] animate-shine">
+            Hey, I&apos;m <span className="text-white text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-500 font-extrabold filter drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] animate-shine">
             Lujia
           </span>
           </h1>
           <FlipWords 
           words={["Web Designer", "Software Engineer", "UI/UX Designer", "Mobile App Developer", "Web Developer"]}
-          className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text 
+          className="bg-gradient-to-r from-cyan-400 via-purple-500 to-yellow-500 text-transparent bg-clip-text 
             text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-6
             [text-wrap:balance] [&_div]:animate-shimmer"
         />
@@ -41,10 +41,10 @@ const Hero = () => {
         
           </div>
           <div className="flex gap-6 justify-center lg:justify-start">
-          <a href="https://discord.com/users/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
+          <a href="https://discord.com/users/@uixlujiaaa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
             <FaDiscord size={24} />
           </a>
-          <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
+          <a href="https://t.me/@uixLujiaaa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
             <FaTelegramPlane size={24} />
           </a>
           </div>
@@ -67,6 +67,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

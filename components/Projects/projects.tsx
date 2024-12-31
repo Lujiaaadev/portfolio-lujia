@@ -28,11 +28,11 @@ const Projects = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 animate-shine">
             Featured Projects
           </h2>
           <div className="w-20 h-1 bg-purple-500 mx-auto mb-8"></div>

@@ -120,39 +120,34 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.2 }}
-                className="absolute top-0 left-0 w-full bg-[#0a0a0a]/95 backdrop-blur-lg shadow-lg md:hidden"
-              >
-                <div className="p-5 pt-20">
-                  {navItems.map((item, i) => (
-                    <motion.div
-                      key={item.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.1 }}
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 top-[64px] bg-black/95 backdrop-blur-sm z-40"
+            >
+              <div className="flex flex-col items-center justify-center h-[calc(100vh-64px)] gap-8">
+                {navItems.map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                  >
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-2xl font-medium text-white hover:text-primary-500 transition-colors"
                     >
-                      <Link
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className={`block py-3 text-lg transition-colors ${
-                          activeSection === item.href.replace('#', '')
-                            ? 'text-white'
-                            : 'text-gray-400'
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                      {item.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
 
         </div>

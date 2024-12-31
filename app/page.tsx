@@ -4,6 +4,7 @@ import Hero from '@/components/Hero/hero'
 import Navbar from '@/components/Navbar'
 import Projects from '@/components/Projects/projects';
 import Services from '@/components/Services/Services';
+import InfiniteScroll from '@/components/ui/InfiniteScroll';
 import React from 'react'
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
     <div>
       <Navbar />
       <Hero />
+      <InfiniteScroll />
       <Services />
       <About />
       <Projects />
