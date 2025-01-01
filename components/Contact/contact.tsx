@@ -18,7 +18,7 @@ const contactInfo = [
     ),
     title: "Email",
     content: "dev.lujiaaa@gmail.com",
-    link: "dev.lujiaaa@gmail.com"
+    link: "mailto:dev.lujiaaa@gmail.com"
   },
   {
     icon: (
@@ -34,8 +34,9 @@ const contactInfo = [
       </div>
     ),
     title: "Phone",
-    content: "@uixLujiaaa on",
-    link: "tel:+12345678900"
+    content: "@uixLujiaaa on TG",
+    link: "https://t.me/lujiadev_services",
+    target: "_blank"
   },
   {
     icon: (
@@ -52,7 +53,8 @@ const contactInfo = [
     ),
     title: "Location",
     content: "Melbourne, Australia",
-    link: "#"
+    link: "https://maps.app.goo.gl/zVn2e9Rbg7ExenoM6",
+    target: "_blank"
   }
 ];
 
@@ -84,6 +86,8 @@ const Contact = () => {
             <a
               key={index}
               href={info.link}
+              target={info.target}
+              rel="noopener noreferrer"
               className="group p-6 bg-[#1a1a1a] hover:bg-gradient-to-br hover:from-cyan-950/50 hover:via-purple-950/50 hover:to-yellow-950/50 p-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.5),0_0_15px_rgba(168,85,247,0.5),0_0_15px_rgba(234,179,8,0.5)] transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center">
