@@ -277,3 +277,12 @@ body {
     filter: blur(8px);
   }
 }
+
+/* styles.css */
+.light-mode .flip-word {
+  color: black;
+}
+
+.dark-mode .flip-word {
+  color: white;
+}

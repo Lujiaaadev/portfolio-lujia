@@ -77,7 +77,7 @@ const About = () => {
           {/* Content Column */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 animate-shine">
+              <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold light:text-gray-900 dark:text-white mb-4 animate-shine">
                 About Me
               </h2>
               <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-yellow-500 via-pink-500 
@@ -85,7 +85,7 @@ const About = () => {
                 transform transition-transform duration-300 rounded-full"></div>
             </div>
 
-            <p className="text-gray-600 dark:text-gray-300 text-lg">
+            <p className="light:text-gray-600 dark:text-gray-300 text-lg">
               I&apos;m a passionate Full Stack Developer with 5+ years of experience building web applications.
               I specialize in JavaScript technologies across the MERN stack, with a strong foundation in
               modern frontend frameworks and backend development.
@@ -96,30 +96,30 @@ const About = () => {
               {skills.map((skill, index) => (
                 <div 
                   key={index}
-                  className="p-4 bg-black hover:bg-gradient-to-br hover:from-cyan-950/50 hover:via-purple-950/50 hover:to-yellow-950/50 p-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.5),0_0_15px_rgba(168,85,247,0.5),0_0_15px_rgba(234,179,8,0.5)] transition-all duration-300"
+                  className="p-4  bg-black hover:bg-gradient-to-br hover:from-cyan-950/50 hover:via-purple-950/50 hover:to-yellow-950/50 p-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.5),0_0_15px_rgba(168,85,247,0.5),0_0_15px_rgba(234,179,8,0.5)] transition-all duration-300"
                 >
                   <div className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-yellow-400 text-2xl mb-2">{skill.icon}</div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{skill.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">{skill.text}</p>
+                  <h3 className="font-semibold light:text-gray-900 dark:text-white mb-2">{skill.title}</h3>
+                  <p className="light:text-gray-600 dark:text-gray-400 text-sm">{skill.text}</p>
                 </div>
               ))}
             </div>
 
             {/* Experience Timeline */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Experience</h3>
+              <h3 className="text-xl font-semibold light:text-gray-900 dark:text-white">Experience</h3>
               <div className="relative">
                 <div className="absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-cyan-400 via-purple-400 to-yellow-400"></div>
                 <div className="pl-4 space-y-4">
                   <div className="relative">
                     <div className="absolute -left-6 mt-1 w-4 h-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-yellow-400 rounded-full"></div>
-                    <h4 className="text-lg font-medium text-gray-900 dark:text-white">Senior Developer</h4>
-                    <p className="text-gray-600 dark:text-gray-400">Tech Company • 2020 - Present</p>
+                    <h4 className="text-lg font-medium light:text-gray-900 dark:text-white">Senior Developer</h4>
+                    <p className="light:text-gray-600 dark:text-gray-400">Tech Company • 2020 - Present</p>
                   </div>
                   <div className="relative">
                     <div className="absolute -left-6 mt-1 w-4 h-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-yellow-400 rounded-full"></div>
-                    <h4 className="text-lg font-medium text-gray-900 dark:text-white">Full Stack Developer</h4>
-                    <p className="text-gray-600 dark:text-gray-400">Software Agency • 2018 - 2020</p>
+                    <h4 className="text-lg font-medium light:text-gray-900 dark:text-white">Full Stack Developer</h4>
+                    <p className="light:text-gray-600 dark:text-gray-400">Software Agency • 2018 - 2020</p>
                   </div>
                 </div>
               </div>
