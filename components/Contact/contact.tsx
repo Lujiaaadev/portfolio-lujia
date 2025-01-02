@@ -59,7 +59,7 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: <FaDiscord />, url: "https://discord.gg/TKtXCYmvAK" },
+  { icon: <FaDiscord />, url: "https://discord.gg/PbmJG5YmMn" },
   { icon: <FaTelegram />, url: "https://t.me/lujiadev_services" }
 ];
 

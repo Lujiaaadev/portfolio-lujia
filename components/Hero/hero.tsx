@@ -38,7 +38,7 @@ const Hero = () => {
         
           </div>
           <div className="flex gap-6 justify-center lg:justify-start">
-          <a href="https://discord.gg/TKtXCYmvAK" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
+          <a href="https://discord.gg/PbmJG5YmMn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-purple-500 transition-colors">
             <FaDiscord size={24} />
           </a>
           <a href="https://t.me/lujiadev_services" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors">
